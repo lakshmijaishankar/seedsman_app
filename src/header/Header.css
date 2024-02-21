@@ -1,0 +1,10 @@
+.header_wrapper_container {
+  @apply shadow-md bg-white px-4 py-1 top-0 sticky z-10;
+  transition: transform 500ms ease;
+  &.header_navbar_fixed_up {
+    transform: translateY(-100%);
+  }
+  &.header_navbar_fixed_down {
+    transform: translateY(0);
+  }
+}

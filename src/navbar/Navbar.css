@@ -1,0 +1,42 @@
+.header_navbar {
+  @apply grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 2fr));
+  &.header_navbar_fixed {
+    @apply fixed bg-white shadow-md left-0 w-full z-10 px-4 top-0;
+    transition: transform 500ms ease 0.2s;
+    transform: translate(0px, -200%);
+  }
+}
+.header_navbar_left {
+  @apply flex items-center p-[5px] justify-center space-x-5;
+  .header_navbar_seedsman_logo {
+    @apply max-h-[60px] flex max-w-[160px] w-full;
+  }
+  .header_navbar_formcontainer {
+    @apply relative;
+    .search_box {
+      @apply inline-flex min-w-[320px];
+      .search_input_box {
+        @apply bg-[#fafafa] min-h-[50px] p-[6px_30px] w-full outline-0;
+        &::-webkit-input-placeholder {
+          @apply text-[#739536] text-[0.8rem];
+        }
+      }
+    }
+    .header_navbar_searchbtn {
+      @apply absolute top-0 right-0 flex items-center justify-center min-w-[50px] h-full bg-[#739536];
+    }
+  }
+}
+.header_navbar_right {
+  @apply flex items-center justify-center space-x-10;
+  & li {
+    @apply text-[14px] font-[400];
+    .currency_switcher {
+      @apply flex items-center;
+    }
+  }
+  .user_account {
+    @apply flex items-center;
+  }
+}

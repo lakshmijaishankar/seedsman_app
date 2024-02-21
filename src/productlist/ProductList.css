@@ -1,0 +1,23 @@
+.productlist_container {
+  @apply grid justify-center gap-x-2 gap-y-2;
+  grid-template-columns: repeat(4, minmax(210px, 240px));
+  grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
+}
+.ant-card .ant-card-cover figure {
+  @apply flex;
+}
+.ant-card .ant-card-body {
+  @apply p-0 font-ubuntu -mt-9 bg-white rounded-l-2xl relative px-2 flex flex-col gap-y-2;
+}
+.ant-image {
+  @apply flex w-full;
+}
+.ant-card .ant-card-meta-title {
+  @apply font-medium overflow-visible whitespace-normal text-wrap;
+}
+.ant-pagination .ant-pagination-item-active {
+  @apply border-[transparent] hover:border-[transparent];
+  & a {
+    @apply text-[#739536] hover:text-[#739536];
+  }
+}

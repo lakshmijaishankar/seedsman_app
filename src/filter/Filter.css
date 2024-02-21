@@ -1,0 +1,9 @@
+.filter_sidebar {
+  @apply max-w-[18rem];
+}
+.ant-menu {
+  @apply divide-y rounded-none;
+}
+.ant-menu .ant-menu-submenu {
+  @apply rounded-none;
+}
