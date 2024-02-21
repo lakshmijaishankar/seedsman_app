@@ -7,6 +7,7 @@ const HeaderComponent: FC<HeaderComponentProps> = ({ headerFixed }) => {
   return (
     <header className={`header_wrapper_container ${headerFixed}`}>
       <NavbarContainer />
+      <></>
     </header>
   );
 };
