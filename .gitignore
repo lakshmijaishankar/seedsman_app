@@ -25,3 +25,9 @@ dist-ssr
 
 #Unused Files
 unusedcode.text
+
+#Firebase
+.firebase/*
+dist
+.firebaserc
+firebase.json

@@ -6,7 +6,10 @@ import type { MenuProps } from "antd";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
+import { Modal } from "rsuite";
+import "rsuite/Modal/styles/index.css";
 import "./Navbar.css";
+import CreateUserContainer from "../createuser/CreateCustomer.container";
 
 const items: MenuProps["items"] = [];
 
@@ -28,7 +31,12 @@ currencySwitcher.forEach((currency) => {
 
 const NavbarComponent: FC = (): JSX.Element => {
   const [currency, setCurrency] = useState<string>("₹ INR");
-
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    console.log("first");
+  };
   return (
     <nav className={`header_navbar`}>
       <div className="header_navbar_left">
@@ -69,7 +77,19 @@ const NavbarComponent: FC = (): JSX.Element => {
         </li>
         <li>🇮🇳 India</li>
         <li className="user_account">
-          <FiUser /> Account
+          <span onClick={handleOpen} className="flex items-center">
+            <FiUser /> Account
+          </span>
+          <Modal open={open} onClose={handleClose}>
+            <Modal.Header>
+              <Modal.Title className="uppercase">create an account</Modal.Title>
+            </Modal.Header>
+            <Modal.Body
+              style={{ maxHeight: "none", overflow: "visible", padding: "0" }}
+              children={<CreateUserContainer />}
+            />
+            <Modal.Footer></Modal.Footer>
+          </Modal>
         </li>
         <li>
           <IoBagOutline className="text-[1.1rem] cursor-pointer" />

@@ -1,0 +1,53 @@
+.create_an_account_form_container {
+  @apply flex flex-col;
+  .create_an_account_form {
+    @apply flex flex-col w-full gap-y-3;
+    & input {
+      @apply outline-0 border-b border-b-[black] w-full h-10 focus:border-b-[#739536] py-2 text-[0.8rem] caret-[#739536];
+      &::-webkit-input-placeholder {
+        @apply text-[0.8rem];
+      }
+    }
+  }
+  .create_user_btn {
+    @apply mt-5 bg-[#739536] text-white text-[0.95rem] py-3;
+  }
+}
+/* modal css overriding */
+.rs-modal-wrapper {
+  @apply outline-0;
+}
+.rs-modal-header {
+  @apply pr-0 w-max m-auto p-[10px_0] border-b-[2px] border-b-[#739536];
+  .rs-modal-title {
+    @apply text-[#739536];
+  }
+}
+.rs-modal-sm {
+  @apply w-auto max-w-none min-h-screen justify-center items-center;
+  display: flex !important;
+  &.rs-modal {
+    @apply m-0;
+  }
+}
+.rs-modal-dialog {
+  @apply w-[450px];
+}
+
+/* DatePicker css overriding */
+.rs-picker-toggle-wrapper {
+  @apply w-full;
+}
+
+.rs-input-group {
+  @apply border-0 rounded-none border-b-[1px] border-b-black;
+}
+.rs-input {
+  @apply p-0;
+}
+.rs-input-group:not(.rs-input-group-disabled):hover {
+  border-color: black;
+}
+.rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus {
+  @apply outline-0 border-b-[#739536];
+}
